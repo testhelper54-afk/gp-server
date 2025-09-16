@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 
 const app = express();
-const stripe = new Stripe("sk_test_..."); // your secret key here
+const stripe = new Stripe("sk_test_51S7vJkQu84Dxc6JSjWWmGWvEXasmf7CoxnajmyCXWs5R5Lcy1RGO7nrWkyDPErtisMgJczMxZA0jgNWWeQ5oQEAE00UTNqJBqy"); // your secret key here
 
 // ✅ Enable CORS for all origins (optional for webhooks)
 app.use(cors());
@@ -42,3 +42,4 @@ app.post("/webhook", bodyParser.raw({ type: "application/json" }), (req, res) =>
 });
 
 app.listen(5001, () => console.log("Webhook server running on port 5001"));
+
